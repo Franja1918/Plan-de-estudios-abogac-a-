@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plan de Estudios Abogacía UBA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+    }
+    .cbc-col, .cpo-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .cpc-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 220px);
+      grid-template-rows: repeat(8, auto);
+      gap: 10px;
+    }
+    .materia {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      text-align: center;
+      font-size: 14px;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: 0.3s;
+    }
+    .materia.activa {
+      opacity: 1;
+      border: 2px solid green;
+    }
+    .cbc { background-color: white; color: black; }
+    .cpc-main { background-color: #e6ccff; }
+    .cpc-especial { background-color: #b266ff; color: white; }
+    .cpo { background-color: #d1b3ff; }
+  </style>
+</head>
+<body>
+<h1>Plan de Estudios Abogacía UBA</h1>
+<div class="grid">
+  <!-- CBC -->
+  <div class="cbc-col">
+    <div class="materia cbc" data-id="cbc1">Principios Generales del Derecho Privado</div>
+    <div class="materia cbc" data-id="cbc2">Pensamiento Científico</div>
+    <div class="materia cbc" data-id="cbc3">Sociedad y Estado</div>
+    <div class="materia cbc" data-id="cbc4">Ciencias Políticas</div>
+    <div class="materia cbc" data-id="cbc5">Sociología</div>
+    <div class="materia cbc" data-id="cbc6">Principios de DDHH y Derecho Constitucional</div>
+  </div>
+
+  <!-- CPC -->
+  <div class="cpc-grid">
+    <div class="materia cpc-main" style="grid-column:1; grid-row:1;" data-id="132">132 Teoría del Estado</div>
+    <div class="materia cpc-main" style="grid-column:1; grid-row:2;" data-id="133">133 Derechos Humanos y Garantías</div>
+    <div class="materia cpc-main" style="grid-column:1; grid-row:3;" data-id="131">131 Teoría General del Derecho</div>
+    <div class="materia cpc-main" style="grid-column:1; grid-row:6;" data-id="135">135 Elementos del Derecho Civil</div>
+    <div class="materia cpc-main" style="grid-column:1; grid-row:8;" data-id="144">144 Análisis Económico y Financiero</div>
+
+    <div class="materia cpc-main" style="grid-column:2; grid-row:1;" data-id="134">134 Derecho Constitucional</div>
+    <div class="materia cpc-main" style="grid-column:2; grid-row:2;" data-id="141">141 Derecho Administrativo</div>
+    <div class="materia cpc-main" style="grid-column:2; grid-row:3;" data-id="139">139 Derecho Penal y Procesal Penal</div>
+    <div class="materia cpc-main" style="grid-column:2; grid-row:4;" data-id="138">138 Elementos del Derecho Procesal Civil</div>
+    <div class="materia cpc-main" style="grid-column:2; grid-row:5;" data-id="136">136 Obligaciones Civiles y Comerciales</div>
+    <div class="materia cpc-main" style="grid-column:2; grid-row:6;" data-id="145">145 Elementos del Derecho Comercial</div>
+    <div class="materia cpc-main" style="grid-column:2; grid-row:7;" data-id="140">140 Elementos de Derecho Reales</div>
+
+    <div class="materia cpc-main" style="grid-column:3; grid-row:2;" data-id="142">142 Derecho del Trabajo y Seguridad Social</div>
+    <div class="materia cpc-main" style="grid-column:3; grid-row:4;" data-id="137">137 Contratos Civiles y Comerciales Anual</div>
+
+    <div class="materia cpc-especial" style="grid-column:4; grid-row:2;" data-id="163">163 Derecho Internacional Público</div>
+    <div class="materia cpc-especial" style="grid-column:4; grid-row:4;" data-id="167">167 Familia y Sucesiones</div>
+
+    <div class="materia cpc-especial" style="grid-column:5; grid-row:5;" data-id="162">162 Sociedades Civiles y Comerciales</div>
+    <div class="materia cpc-especial" style="grid-column:5; grid-row:2;" data-id="168">168 Finanzas Públicas y Derecho Tributario</div>
+    <div class="materia cpc-especial" style="grid-column:6; grid-row:4;" data-id="169">169 Derecho Internacional Privado</div>
+    <div class="materia cpc-especial" style="grid-column:7; grid-row:6;" data-id="idioma">Nivel único de Idioma</div>
+  </div>
+
+  <!-- CPO -->
+  <div class="cpo-col">
+    <div class="materia cpo" data-id="cpo1">Derecho Laboral</div>
+    <div class="materia cpo" data-id="cpo2">Derecho Público (Int. Público)</div>
+    <div class="materia cpo" data-id="cpo3">Derecho Público (Administrativo)</div>
+    <div class="materia cpo" data-id="cpo4">Derecho Penal</div>
+    <div class="materia cpo" data-id="cpo5">Derecho Privado</div>
+    <div class="materia cpo" data-id="cpo6">Derecho Notarial</div>
+    <div class="materia cpo" data-id="cpo7">Derecho Económico y Empresarial</div>
+    <div class="materia cpo" data-id="cpo8">Derecho Tributario</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
